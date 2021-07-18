@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+	box-sizing: border-box;
+}
+body {
+ 	background-image: url('images/relax_bar.jpg');
+	/*background-color:#17202A;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+	font-family:courier;
+}
+#profile_img {
+	width:500px;
+	height:500px;
+}
+h1{
+	color: white;
+	text-align: center;
+	font-family: verdana;
+	font-size: 100%;
+	
+}
+a:link, a:visited {
+	margin:20px;
+	background-color: #154360;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+a:hover, a:active {
+  background-color: #212F3C;
+}
+.img_left_side {
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 600px;
+	background: #ccc;
+	padding: 20px;
+}
+.info_right_side {
+	float: left;
+	padding: 20px;
+	width: 50%;
+	background-color: #f1f1f1;
+	height: 600px;
+}
+.img_right_side {
+	float: left;
+	text-align: center;
+	width: 50%;
+	height: 450px;
+	background: rgb(35, 35, 35);
+	padding: 20px;
+}
+.info_left_side{
+	float: left;
+	padding: 20px;
+	width: 50%;
+	background-color: rgb(0, 0, 0);
+	height: 450px;
+	text-align: center;
+	color:white;
+}
+header {
+	background-color: rgb(35, 35, 35);
+	padding: 5px;
+	text-align: left;
+	font-size: 30px;
+	color: white;
+}
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	background-color: rgb(35, 35, 35);
+	padding: 40px;
+	text-align: center;
+	color: white;
+}
+
+@media (max-width: 1200px) {
+	.img_left_side, .img_right_side {
+		width: 100%;
+	}
+	.info_left_side, .info_right_side {
+		width: 100%;
+		height: 500px;
+	}
+}
+@media (max-width: 500px) {
+	a {
+		width: 80%;
+		height: auto;
+	}
+ 	#profile_img {
+		width:250px;
+		height:250px;
+	}
+	.img_left_side, .img_right_side {
+		height: auto;
+	}
+}
+</style>
+</head>
+
+<body id="top"><br><br>
+
+<header>
+	<h1>About me</h1>
+</header>
+
+<section>
+	<div class="img_left_side">
+		<br><br>
+		<img id="profile_img" src="images/profile_photo.jpg" alt="person">
+	</div>
+	<div class="info_right_side">
+		<br><br><br><br><br><br><br><br><br>
+		<h2>Supakkit Sitthi (Prem)</h2>
+		<p>Group: Online Codecamp #10</p>
+		<p>Address: House No.125, Suthep sub-district, Muang district, Chiang Mai, 50200</p>
+ 	</div>
+</section>
+<div style="font-size: 200%;">
+	<br><br><h1>&#8595; My hobbies &#8595;</h1><br><br>
+</div>	
+<section>	
+	<div class="info_left_side">
+		<br><br><br><br><br><br><br><br><br><br>
+		<h2> Volunteer </h2>
+ 	</div>
+	<div class="img_right_side">
+		<br><br>
+		<img id="profile_img" src="images/volunteer.jpg" style="height:auto;" alt="volunteer">
+	</div>
+	<div class="img_left_side">
+		<br><br>
+		<img id="profile_img" src="images/robot_challenge.jpg" style="height:auto;" alt="robot_challenge">
+	</div>
+	<div class="info_right_side" style="text-align:center;">
+		<br><br><br><br><br><br><br><br><br><br>
+		<h2>Inventing</h2>
+ 	</div>
+</section>
+
+<footer>
+</footer>
+
+<div style="text-align:center;font-family:courier;font-size:120%;">
+	<a href="#top" style="float:center;">&#8593; Top</a>
+	<a href="index.html" title="Go to index.html page" style="float:left;margin-left:10%;" target="_self">&#8592; Home</a>
+	<a href="friends.html" title="Go to friends.html page" style="float:right;;margin-right:10%;" target="_self">&#8594; About my friends</a>
+</div>
+
+</body>
+</html>

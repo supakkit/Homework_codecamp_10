@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Profile</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+	box-sizing: border-box;
+}
+body {
+ 	background-image: url('images/relax_bar.jpg');
+	/*background-color:#17202A;*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+	font-family:courier;
+}
+#profile_img {
+	width:300px;
+	height:300px;
+	border-radius:1%;
+}
+h1 {
+	color: white;
+	text-align: center;
+	font-family: verdana;
+	font-size: 100%;
+}
+a:link, a:visited {
+	margin:20px;
+	background-color: #154360;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: #212F3C;
+}
+
+.friends_left_side {
+	float: left;
+	text-align: center;
+	width: 30%;
+	height: 400px;
+	background: #ccc;
+	padding: 20px;
+}
+.friends_right_side {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	background-color: #f1f1f1;
+	height: 400px;
+}
+.dark_background{
+	background: #161616;
+}
+.dark_background_info{
+	background-color: #000000;
+	color:white;
+}
+header {
+	background-color: rgb(35, 35, 35);
+	padding: 5px;
+	text-align: left;
+	font-size: 30px;
+	color: white;
+}
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	background-color: rgb(35, 35, 35);
+	padding: 40px;
+	text-align: center;
+	color: white;
+}
+
+@media (max-width: 1200px) {
+	.friends_left_side, .friends_right_side {
+		width: 100%;
+		height: auto;
+	}
+}
+@media (max-width: 500px) {
+	a {
+		width: 80%;
+		height: auto;
+	}
+	#profile_img {
+		width:250px;
+		height:250px;
+	}
+}
+</style>
+</head>
+
+<body id="top"><br><br>
+
+<header>
+	<h1>About my friends</h1>
+</header>
+
+<section>
+	<div class="friends_left_side"><br><br>
+		<img id="profile_img" src="images/sermsuk.jpeg" alt="Sermsuk">
+	</div>
+	<div class="friends_right_side"><br>
+		<h2>Sermsuk Thongsuk (Ton)</h2>
+		<p>Mechanical Engineer</p>
+ 	</div>
+	<div class="friends_left_side dark_background">
+		<br><br><img id="profile_img" src="images/sumittra.jpg" alt="Sumittra">
+	</div>
+		<div class="friends_right_side dark_background_info"><br>
+		<h2>Sumatra Sitthi (Pop)</h2>
+		<p>Biology Teacher</p>
+	</div>
+	<div class="friends_left_side"><br><br>
+		<img id="profile_img" src="images/parinya.jpg" alt="Parinya">
+	</div>
+	<div class="friends_right_side"><br>
+		<h2>Parinya Wongngam (Mud)</h2>
+		<p>Mechanical Engineer</p>
+	</div>
+	<div class="friends_left_side dark_background"><br><br>
+		<img id="profile_img" src="images/anawat.jpg" alt="Anawat">
+	</div>
+	<div class="friends_right_side dark_background_info"><br>
+		<h2>Anawat Khamsook (Jib)</h2>
+		<p>Agricultural Seller</p>
+	</div>
+</section>
+
+<footer>
+</footer>
+
+<div style="text-align:center;font-family:courier;font-size:120%;">
+	<a href="#top" style="float:center;">&#8593; Top</a>
+	<a href="index.html" title="Go to index.html page" style="float:left;margin-left:10%;" target="_self">&#8592; Home</a>
+	<a href="profile.html" title="Go to profile.html page" style="float:right;margin-right:10%;" target="_self">&#8594; About me</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+label{
+	font-size: 15px;
+}
+.left_side {
+	float: left;
+	width: 50%;
+	height: 120px; /* only for demonstration, should be removed */
+}
+.right_side {
+	float: left;
+	width: 50%;
+	height: 120px; /* only for demonstration, should be removed */
+}
+.bottom_side {
+	float: left;
+	width: 25%;
+	height: 60px; /* only for demonstration, should be removed */
+}
+button {
+	background-color: #f44336;
+	color: white;
+	padding: 10px 25px;
+	text-align: center;
+	display: inline-block;
+	font-size: 15px;
+	border-radius:7px;
+}
+button:hover, button:active {
+	background-color: red;
+}
+</style>
+</head>
+
+<body>
+<form action="/action_page.php">
+	<fieldset style="width:400px;">
+		<legend>Booking Flight</legend>
+		
+		<div>
+			<div class="left_side">
+				<label for="flyingfrom">Flying from</label><br>
+				<select id="flyingfrom" name="flyingfrom">
+					<option value="Jakarta"> Jakarta , Indonesia </option>
+					<option value="Singapore"> Singapore</option>
+					<option value="Bangkok"> Bangkok, Thailand </option>
+					<option value="Kuala Lumpur"> Kuala Lumpur, Malaysia </option>
+					<option value="Manila"> Manila , Philippines </option>
+					<option value="Hanoi"> Hanoi, Vietnam </option>
+				</select><br><br>
+				<label for="departing">Departing</label><br>
+  				<input type="date" id="departing" name="departing">
+			</div>
+			<div class="right_side">
+				<label for="flyingto">To</label><br>
+				<select id="flyingto" name="flyingto">
+					<option value="Jakarta"> Jakarta , Indonesia </option>
+					<option value="Singapore"> Singapore</option>
+					<option value="Bangkok"> Bangkok, Thailand </option>
+					<option value="Kuala Lumpur"> Kuala Lumpur, Malaysia </option>
+					<option value="Manila"> Manila , Philippines </option>
+					<option value="Hanoi"> Hanoi, Vietnam </option>
+				</select><br><br>
+				<label for="returning">Returning </label><br>
+  				<input type="date" id="returning" name="returning">
+			</div>
+		</div>
+		<div>
+			<div class="bottom_side">
+				<label for="adult">Adult</label><br>
+  				<input type="number" id="adult" name="adult" min="0" max="999" value="1">
+			</div>
+			<div class="bottom_side">
+				<label for="child"> Child </label><br>
+  				<input type="number" id="child" name="child" min="0" max="999" value="0">
+			</div>
+			<div class="bottom_side">
+				<label for="infant"> Infant </label><br>
+  				<input type="number" id="infant" name="infant" min="0" max="999" value="0">
+			</div>
+			<div class="bottom_side">
+				<label for="currency" style="color:red;"> Currency </label><br>
+				<select id="currency" name="currency">
+					<option value="AUD"> AUD </option>
+					<option value="BAM"> BAM </option>
+					<option value="BDT"> BDT </option>
+					<option value="BRL"> BRL </option>
+					<option value="CAD"> CAD </option>
+					<option value="CHF"> CHF </option>
+					<option value="CNY"> CNY </option>
+					<option value="EUR"> EUR </option>
+					<option value="PKR" selected> PKR </option>
+					<option value="THB"> THB </option>
+				</select>
+			</div>
+			
+		</div>
+
+
+		<button type="button"> SEARCH </button>
+	</fieldset>
+</form>
+</body>
+</html>
