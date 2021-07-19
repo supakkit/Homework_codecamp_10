@@ -1,0 +1,19 @@
+Exercise 1
+ผลลัพธ์ console.log ทั้งสามคืออะไร
+
+const name = 'Tle';
+console.log(typeof `hello ${1}`);
+console.log(typeof `hello ${name}`);
+console.log(typeof `hello ${'name'}
+`);
+
+Answer
+console.log(typeof `hello ${1}`);
+result: string
+
+console.log(typeof `hello ${name}`);
+result: string
+
+console.log(typeof `hello ${'name'}
+`);
+result: string
