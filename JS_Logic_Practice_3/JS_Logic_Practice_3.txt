@@ -1,0 +1,8 @@
+1) if (-1 || 0) alert( 'first' );
+    Ans. run
+
+2) if (-1 && 0) alert( 'second' );
+    Ans. not running
+
+3) if (null || -1 && 0) alert( 'third' );
+    Ans. not running
