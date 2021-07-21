@@ -1,6 +1,6 @@
 ### CodeCamp #10
     1. นายสุพรรคกิจ สิทธิ (Supakkit Sitthi)
-    2. JavaScript's Operator Practice #2
+    2. JavaScript Operator Practice #2
 
         แบบฝึกหัด การดำเนินการเบื้องต้น
             2. จงหาผลลัพธ์ของ Statement ต่อไปนี้

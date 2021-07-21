@@ -1,6 +1,6 @@
 ### CodeCamp #10
     1. นายสุพรรคกิจ สิทธิ (Supakkit Sitthi)
-    2. JavaScript's Condition Practice #3
+    2. JavaScript Condition Practice #3
 
         แบบฝึกหัด
             3) ใช้ prompt ในการรับคะแนนมาคำนวณเกรด
