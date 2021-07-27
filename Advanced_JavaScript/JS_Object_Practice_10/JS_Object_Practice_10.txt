@@ -1,0 +1,20 @@
+2) การทำงานของ code ดังกล่าวจะได้อะไรออกมา
+
+            function makeUser() {
+            return {
+                name: "John",
+                ref: this
+            };
+            };
+
+            let user = makeUser();
+
+            alert( user.ref.name ); // What's the result?
+
+Answer "" ได้สตริงว่างออกมา เพราะ this ถูกเรียกใช้ผ่าน key ของ Object ไม่ใช่ method
+ทำให้ this นี้อ้างอิงถึง global object ซึ่งเมื่อรันผ่าน browser จึงอ้างอิงถึง global object ที่ชื่อ windown
+ดังนั้นเมื่อเรียกค่า name ของ object จึงได้ค่า name ของ windown object ออกมา ซึ่งได้ค่าเป็นสตริงว่าง
+
+
+Note: Link ศึกษาเพิ่มเติมเกี่ยวกับ this
+https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/

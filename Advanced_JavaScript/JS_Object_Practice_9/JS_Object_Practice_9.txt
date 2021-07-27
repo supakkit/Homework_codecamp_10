@@ -1,0 +1,11 @@
+1) การทำงานของ code ดังกล่าวจะได้อะไรออกมา
+
+            let user = {
+                name: "John",
+                go: function() { alert(this.name) }
+            }
+
+            (user.go)()
+
+Answer "John" เพราะ this อ้างอิงถึง Object ที่เรียกใช้ปัจจุบัน ซึ่งฟังก์ชัั่น go()
+    อยู่ใน Object ชื่อ user ซึ่งเก็บ key ชื่อ name และมี value คือ "John" อยู่
