@@ -77,10 +77,7 @@ function practice_1_11() {
         { name: "watermelon", birth: "1985-12-01" },
     ];
     array2 = array1.map( item => { 
-                // item.age = 2019 - Number( item.birth.split('-', 1) );
-                let birthDay = new Date(item.birth);
-                let dayCompare = new Date('2019-01-01');
-                item.age = dayCompare.getFullYear() - birthDay.getFullYear();
+                item.age = 2019 - +item.birth.slice(0,4);
                 return item;
                 });
     return array2;
@@ -93,10 +90,10 @@ function practice_1_12() {
         { name: "watermelon", birth: "1985-12-30" },
     ];
     array2 = array1.map( item => {
-                let birthDay = new Date(item.birth);
+                month = ["jan", "feb", "mar", "apr", "may", "jun", "jul","aug", "sep", "oct", "nov", "dec"];
                 return `<tr>
                             <td>${item.name}</td>
-                            <td>${birthDay.getDate()} ${ birthDay.toLocaleString('default', { month: 'short' }) } ${birthDay.getFullYear()}</td>
+                            <td>${ item.birth.slice(8) } ${ month[ +item.birth.slice(5,7) - 1 ] } ${ item.birth.slice(0,4) }</td>
                         </tr>`;
                 });
     return array2;
