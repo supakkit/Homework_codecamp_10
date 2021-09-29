@@ -1,0 +1,25 @@
+1) ในบรรทัดที่มีเลข 1 2 และ 3 จะได้ค่าออกมาเป็นอะไร
+
+            let animal = {
+                jumps: null
+            };
+
+            let rabbit = {
+                __proto__: animal,
+                jumps: true
+            };
+
+
+            alert( rabbit.jumps ); // ? (1)
+
+            delete rabbit.jumps;
+
+            alert( rabbit.jumps ); // ? (2)
+
+            delete animal.jumps;
+
+            alert( rabbit.jumps ); // ? (3)
+
+Answer: บรรทัดที่มีเลข 1 ได้ค่า true
+        บรรทัดที่มีเลข 2 ได้ค่า null
+        บรรทัดที่มีเลข 3 ได้ค่า undefined
