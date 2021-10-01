@@ -1,0 +1,5 @@
+2) ถ้าเราต้องการสร้างใช้ constructor ของ obj เราสามารถเขียนแบบนี้ได้ไหม
+
+    let obj2 = new obj.constructor();
+
+Answer: สามารถใช้ได้ ถ้ามั่นใจว่า constructor มีค่า property ที่ถูกต้อง กล่าวคือ obj.constructor ต้องชี้ไปยัง Constructor ที่ต้องการถ่ายทอดมา หากตัว Constructor มีการ overwrite prototype และลืมกำหนดค่าให้กับ constructor จะทำให้ obj.constructor ไม่ได้ชี้ไปหา Constructor ซึ่งทำให้ผลลัพธ์ไม่เป็นอย่างที่ต้องการได้

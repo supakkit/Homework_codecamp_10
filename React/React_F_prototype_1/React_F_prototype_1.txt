@@ -1,0 +1,71 @@
+1) จากโค๊ดต่อไปนี้มีการสร้าง new Rabbit() ขึ้นมา
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    alert( rabbit.eats ); // true
+            
+
+1.1) ถ้ามีการ alert ในบรรทัดดังกล่าวจะได้อะไรออกมา
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    Rabbit.prototype = {};
+
+    alert( rabbit.eats ); // ?
+
+Answer: true เพราะประกาศตัวแปร rabbit โดยการเรียกใช้ new Rabbit() ก่อนที่จะมีการ overwrite ค่าของ Rabbit.prototype (F.prototype = <another object>) ทำให้ค่าของ rabbit.eats ยังคงเก็บค่าเก่าไว้
+
+1.2) ถ้ามีการเปลี่ยนบรรทัดสีเหลืองจะเป็นอย่างไร
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    Rabbit.prototype.eats = false;
+
+    alert( rabbit.eats ); // ?
+
+Answer: false เพราะเมื่อประกาศตัวแปร rabbit โดยการเรียกใช้ new Rabbit() ตัว prototype ซึ่งเป็น Object จะถูก assigned by reference ให้กับ rabbit ทำให้ rabbit.eats ชี้ไปยังค่าใน Rabbit.prototype.eats
+
+1.3) ถ้ามีการเปลี่ยนบรรทัดสีเหลืองจะเป็นอย่างไร
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    delete rabbit.eats;
+
+    alert( rabbit.eats ); // ?
+
+Answer: true เหตุผลเช่นเดียวกับข้อ 1.2 เพราะเป็นการ assigned by reference ให้กับ rabbit ซึ่งใน rabbit ไม่ได้มีตัวแปร eats อยู่ แต่ชี้ไปยังค่าใน Rabbit.prototype.eats เมื่อ delete rabbit.eats จึงไม่มีผลใดๆ
+
+1.4) ถ้ามีการเปลี่ยนบรรทัดสีเหลืองจะเป็นอย่างไร
+
+    function Rabbit() {}
+    Rabbit.prototype = {
+        eats: true
+    };
+
+    let rabbit = new Rabbit();
+
+    delete Rabbit.prototype.eats;
+
+    alert( rabbit.eats ); // ?
+
+Answer: undefined เพราะเป็นการ assigned by reference ให้กับ rabbit ซึ่งใน rabbit ไม่ได้มีตัวแปร eats อยู่ แต่ชี้ไปยังค่าใน Rabbit.prototype.eats เมื่อ delete Rabbit.prototype.eats จึงทำให้ rabbit.eats ชี้ไปไม่เจอค่าของ eats ทำให้เป็น undefined
