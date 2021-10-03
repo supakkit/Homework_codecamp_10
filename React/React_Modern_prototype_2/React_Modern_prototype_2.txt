@@ -1,0 +1,19 @@
+2) สร้าง object rabbit ด้วย new keyword
+
+            function Rabbit(name) {
+                this.name = name;
+            }
+            Rabbit.prototype.sayHi = function() {
+                alert(this.name);
+            };
+
+            let rabbit = new Rabbit("Rabbit");
+
+        - คำสั่งทั้งหมดนี้ทำงานเหมือนกันหรือไม่
+
+            rabbit.sayHi();
+            Rabbit.prototype.sayHi();
+            Object.getPrototypeOf(rabbit).sayHi();
+            rabbit.__proto__.sayHi();
+
+Answer: ไม่เหมือน คำสั่ง rabbit.sayHi() แสดง String คำว่า "Rabbit" ออกมา ขณะที่คำสั่งอื่นๆ แสดง undefined
