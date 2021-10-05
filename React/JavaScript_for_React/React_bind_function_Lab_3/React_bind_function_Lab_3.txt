@@ -1,0 +1,15 @@
+Lab
+3) ค่าของ value ในฟังก์ชันจะเปลี่ยนไปไหมหลังจาก bind
+
+    function sayHi() {
+        alert( this.name );
+    }
+    sayHi.test = 5;
+    
+    let bound = sayHi.bind({
+        name: "John"
+    });
+    
+    alert( bound.test ); // ผลลัพธ์คืออะไร แล้ว ทำไมจึงได้อย่างนั้น
+
+Answer: undefined เพราะ ตัวแปร test ถูกเก็บเป็นสมาชิก object ของ sayHi ขณะที่การประกาศตัวแปร bound กำหนดให้ sayHi ชี้ไปที่ object อื่น ({name: "John"}) ซึ่งไม่มีตัวแปร test อยู่ ทำให้ bound.test มีค่าเป็น undefined

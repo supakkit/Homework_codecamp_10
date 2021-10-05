@@ -1,0 +1,12 @@
+Lab
+    1) this มีค่าเป็นอะไร
+
+    function f() {
+        alert( this ); // ?
+    }
+    let user = {
+        g: f.bind(null)
+    };
+    user.g();
+
+Answer: object Window ของ browser
