@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - JSX Lab #2</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+    <div id='root'></div>
+
+    <script type="text/babel">
+
+        let myString = 'Prem';
+        let myNumber = 10;
+        let myBoolean = true;
+        let myNull = null;
+        let myUndefined;
+
+        let myArray = ['arr1', 'arr2'];
+        let myObject = {a: 'value1', b: 'value2'};
+
+        function MyData() {
+            return (
+                <div>
+                    <p>{myString}</p>
+                    <p>{myNumber}</p>
+                    <p>{myBoolean}</p>
+                    <p>{myNull}</p>
+                    <p>{myUndefined}</p>
+                    <p>{myArray}</p>
+                    <p>{myObject}</p>
+                </div>);
+        }
+
+        ReactDOM.render(<MyData />, document.getElementById('root'));
+
+    </script>
+</body>
+</html>

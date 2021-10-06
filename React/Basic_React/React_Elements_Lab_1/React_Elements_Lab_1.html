@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React - Elements Lab #1</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+    <div id='myResume'></div>
+
+    <script>
+        const myTitle = React.createElement('h1', { style:{color: 'green'} }, 'Resume');
+        const myName = React.createElement('h2', {}, 'Supakkit Sitthi');
+        const myDescription = React.createElement('p', {}, 'My favorite color is dark blue, height is 170 cm., weight is 60 kg. and favorite quote is "Go gain or go home". ');
+        const myResume = React.createElement('div', {}, myTitle, myName, myDescription);
+        
+
+        ReactDOM.render(myResume, document.getElementById('myResume'));
+    </script>
+</body>
+</html>
