@@ -22,7 +22,7 @@
         let myUndefined;
 
         let myArray = ['arr1', 'arr2'];
-        let myObject = {a: 'value1', b: 'value2'};
+        let myObject = {'a': 'value1', 'b': 'value2'};
 
         function MyData() {
             return (
@@ -33,7 +33,7 @@
                     <p>{myNull}</p>
                     <p>{myUndefined}</p>
                     <p>{myArray}</p>
-                    <p>{myObject}</p>
+                    {/*<p>{myObject}</p>*/}
                 </div>);
         }
 
@@ -42,3 +42,7 @@
     </script>
 </body>
 </html>
+
+<!-- Answer: เมื่อรันพบว่าไม่แสดงผลเนื่องจากเกิด error การแสดงผลของตัวแปร Object
+เมื่อนำบรรทัดที่ 36 ส่วนแสดงผลตัวแปร Object ออกจึงสามารถแสดงผลได้
+มีแค่ตัวแปรประเภท String, Number และ Array เท่านั้นที่แสดงผลออกมาทางหน้า browser -->
